@@ -26,7 +26,7 @@ class MainActivity : ComponentActivity() {
             val density = LocalDensity.current
             // Apply the user's text-size setting app-wide.
             CompositionLocalProvider(
-                LocalDensity provides Density(density.density, density.fontScale * vm.textScale)
+                LocalDensity provides Density(density.density, density.fontScale * vm.currenttextScale)
             ) {
                 MaterialTheme(colorScheme = if (vm.darkModeEnabled) darkColorScheme() else lightColorScheme()) {
                     Surface(modifier = Modifier.fillMaxSize()) {
