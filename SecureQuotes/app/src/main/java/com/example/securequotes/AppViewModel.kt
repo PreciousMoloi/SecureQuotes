@@ -39,7 +39,7 @@ class AppViewModel(app: Application) : AndroidViewModel(app) {
         private set
     var isAuthorVisible by mutableStateOf(store.showAuthor)
         private set
-    var textScale by mutableStateOf(store.textScale)
+    var currenttextScale by mutableStateOf(store.textScale)
         private set
 
     // REST API data
@@ -130,7 +130,7 @@ class AppViewModel(app: Application) : AndroidViewModel(app) {
 
     fun setDarkMode(value: Boolean) { darkModeEnabled = value; store.darkMode = value }
     fun setShowAuthor(value: Boolean) { isAuthorVisible = value; store.showAuthor = value }
-    fun setTextScale(value: Float) { textScale = value; store.textScale = value }
+    fun setTextScale(value: Float) { currenttextScale = value; store.textScale = value }
 
     fun updateDisplayName(newName: String) {
         val current = user ?: return
