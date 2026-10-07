@@ -244,7 +244,7 @@ fun SettingsScreen(vm: AppViewModel) {
             Text("Text size")
             listOf("Small" to 0.85f, "Normal" to 1.0f, "Large" to 1.25f).forEach { (label, scale) ->
                 Row(verticalAlignment = Alignment.CenterVertically) {
-                    RadioButton(selected = vm.textScale == scale, onClick = { vm.setTextScale(scale) })
+                    RadioButton(selected = vm.currenttextScale == scale, onClick = { vm.setTextScale(scale) })
                     Text(label)
                 }
             }
